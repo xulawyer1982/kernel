@@ -34,7 +34,7 @@ on:
       kernel_auto:
         description: "Auto use the latest kernel"
         required: false
-        default: true
+        default: false
         type: boolean
       delete_source:
         description: "Delete source after compilation"
@@ -119,7 +119,7 @@ jobs:
             MATRIX='{"include":[{"kernel_version":"${{ inputs.kernel_version }}"}]}'
           fi
           echo "matrix=${MATRIX}" >> "${GITHUB_OUTPUT}"
-
+hi
   build:
     needs: setup
     runs-on: ubuntu-24.04-arm
