@@ -115,7 +115,7 @@ jobs:
         id: set-matrix
         run: |
           if [[ "${{ inputs.kernel_version }}" == "all" ]]; then
-            MATRIX='{"include":[{"kernel_version":"5.10.y"},{"kernel_version":"5.15.y"},{"kernel_version":"6.1.y"},{"kernel_version":"6.6.141"},{"kernel_version":"6.12.y"},{"kernel_version":"6.18.y"}]}'
+            MATRIX='{"include":[{"kernel_version":"5.10.y"},{"kernel_version":"5.15.y"},{"kernel_version":"6.1.y"},{"kernel_version":"6.6.y"},{"kernel_version":"6.12.y"},{"kernel_version":"6.18.y"}]}'
           else
             MATRIX='{"include":[{"kernel_version":"${{ inputs.kernel_version }}"}]}'
           fi
